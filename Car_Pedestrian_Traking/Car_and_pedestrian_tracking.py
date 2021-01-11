@@ -8,11 +8,11 @@ car_tracker_file = 'haarcascade_car.xml'
 pedestrian_tracker_file = 'haarcascade_fullbody.xml'
 
 
-#Create car classifier
+#Create c and p classifier
 car_tracker = cv2.CascadeClassifier(car_tracker_file)
 pedestrian_tracker = cv2.CascadeClassifier(pedestrian_tracker_file)
 
-#Run forever until the video stops
+#Run forever until the video ends
 while True:
 
     #Read the current frame
@@ -42,7 +42,7 @@ while True:
     #Display the video with the object spotted
     cv2.imshow('C&P detector', frame)
 
-    #Don't autoclose. The number 1 is real time.
+    #Don't autoclose. The number 1 is real time
     key = cv2.waitKey(1)
 
     #Stop if Q or q is pressed
